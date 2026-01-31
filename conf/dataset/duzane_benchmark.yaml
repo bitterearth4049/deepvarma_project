@@ -1,0 +1,17 @@
+name: "dunzane_benchmark"
+source: "hf"
+hf_id: "dunzane/time-series-dataset"
+subset: "electricity"     # for example, check HF card
+split: "train"
+
+time_column: "timestamp"
+target_columns:
+  - "load"                # placeholder
+exogenous_columns:
+  - "temperature"         # placeholder
+  - "humidity"            # placeholder
+
+is_already_wide: false
+freq: "H"
+fill_method: "ffill"
+standardize: true

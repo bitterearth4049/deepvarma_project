@@ -1,0 +1,21 @@
+name: "monash_fred_md"
+source: "hf"
+hf_id: "Monash-University/monash_tsf"
+subset: "fred_md"
+split: "train"
+
+# You must inspect the dataset and fix these
+time_column: "date"          # example placeholder
+target_columns:
+  - "INDPRO"                 # example placeholder
+  - "CPIAUCSL"               # example placeholder
+exogenous_columns:
+  - "FEDFUNDS"               # example placeholder
+  - "GS10"                   # example placeholder
+
+# If your HF dataset is not in a nice tabular format,
+# set this to false and implement manual mapping
+is_already_wide: false
+freq: "M"
+fill_method: "ffill"
+standardize: true

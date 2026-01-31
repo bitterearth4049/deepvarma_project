@@ -1,0 +1,21 @@
+name: "copper_demand"
+source: "hf"
+hf_id: "CanariaView/GlobalCopperDemandForecastingDataset"
+subset: "default"       # there is only the default subset
+split: "train"          # only 'train' split exists
+
+time_column: "Date"
+
+target_columns:
+  - "Copper price"
+
+exogenous_columns:
+  - "HSI_value"
+  - "CCI_value"
+  - "IPI_value"
+  - "GDPC_value"
+
+is_already_wide: true
+freq: "M"
+fill_method: "ffill"
+standardize: true

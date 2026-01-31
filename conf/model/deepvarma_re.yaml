@@ -1,0 +1,22 @@
+variant: "re"
+
+lstm_y:
+  input_dim: null
+  hidden_dim: 64
+  num_layers: 2
+  dropout: 0.1
+  output_dim: null
+  bidirectional: false
+
+lstm_x: null
+
+varmax:
+  p: 2
+  q: 1
+  use_exogenous: false
+  maxiter: 200
+  trend: "n"
+  error_cov_type: "diagonal"
+
+lags_exog: 0
+forecast_horizon: 24

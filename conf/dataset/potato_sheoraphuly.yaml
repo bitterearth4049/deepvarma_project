@@ -1,0 +1,14 @@
+name: "potato_sheoraphuly"
+source: "data_gov"
+
+api_url: "https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24?api-key=579b464db66ec23bdd00000138b56082588b4d4958bcb32d6f574e53&format=json&offset=0&limit=10000&filters[State]=West%20Bengal&filters[District]=Hooghly&filters[Market]=Sheoraphuly&filters[Commodity]=Potato&range[Arrival_Date][gte]=2010-01-01&range[Arrival_Date][lte]=2025-12-31"
+
+time_column: "Arrival_Date"
+target_columns:
+  - "Modal_Price"
+exogenous_columns: []
+
+date_format: "%d/%m/%Y"
+aggregate: "mean"
+fill_method: "ffill"
+standardize: true

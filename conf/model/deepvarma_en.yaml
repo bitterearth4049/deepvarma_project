@@ -1,0 +1,22 @@
+variant: "en"
+
+lstm_y: null
+
+lstm_x:
+  input_dim: null
+  hidden_dim: 64
+  num_layers: 2
+  dropout: 0.1
+  output_dim: null
+  bidirectional: false
+
+varmax:
+  p: 2
+  q: 1
+  use_exogenous: true
+  maxiter: 200
+  trend: "c"
+  error_cov_type: "diagonal"
+
+lags_exog: 0
+forecast_horizon: 24

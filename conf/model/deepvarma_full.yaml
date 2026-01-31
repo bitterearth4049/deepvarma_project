@@ -1,0 +1,30 @@
+variant: "full"        # "re", "en", "full"
+
+lstm_y:
+  input_dim: null      # filled from data at runtime
+  hidden_dim: 64
+  num_layers: 2
+  dropout: 0.1
+  output_dim: null     # filled from data at runtime
+  bidirectional: false
+
+lstm_x:
+  input_dim: null      # filled from data at runtime
+  hidden_dim: 64
+  num_layers: 2
+  dropout: 0.1
+  output_dim: null     # decoded x dim if you want reconstruction
+  bidirectional: false
+
+varmax:
+  p: 2
+  q: 1
+  use_exogenous: true
+  maxiter: 200
+  trend: "n"          # no intercept, residuals centered
+  error_cov_type: "diagonal"  # or "full"
+
+lags_exog: 0          # s in paper, number of lags for encoded H_t
+
+# forecasting horizon for eval
+forecast_horizon: 24

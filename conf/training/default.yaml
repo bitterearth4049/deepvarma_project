@@ -1,0 +1,24 @@
+seed: 42
+
+device: "cpu"     # "cpu" or "cuda"
+num_epochs_lstm_y: 50
+num_epochs_lstm_x: 30
+batch_size: 1      # we use single long sequence; batch dimension kept for extensibility
+lr_lstm_y: 1e-3
+lr_lstm_x: 1e-3
+weight_decay: 0.0
+clip_grad_norm: 1.0
+
+train_fraction: 0.7
+val_fraction: 0.15   # test = 1 - train_fraction - val_fraction
+
+# k fold blocked CV over time
+cv:
+  enabled: true
+  n_splits: 3
+  min_train_fraction: 0.5
+
+early_stopping:
+  enabled: true
+  patience: 5
+  min_delta: 1e-4
